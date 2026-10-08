@@ -36,7 +36,7 @@ function PostList() {
     loadPost();
   }, []);
   if (loading)
-    return <p className="text-center mt-10 text-gray-500">Loading posts...</p>;
+    return <p className="text-center mt-10 text-gray-500 animate-bounce p-5 ">Loading posts...</p>;
   if (error) return <p className="text-center mt-10 text-red-500">{error}</p>;
   if (!posts.length)
     return <p className="text-center mt-10 text-gray-400">No posts yet.</p>;
@@ -58,15 +58,16 @@ function PostList() {
                 borderRadius: "6px",
               }}
             >
-              <h1 className="bg-black">{post.title}</h1>
+              <h1 className="font-bold">Title</h1>
+              <h1 className="font-mono">{post.title}</h1>
               <p>{post.content}</p>
               <p>
-                <small className="bg-black">By: {post.author}</small>
+                <small className="text-black ">By: {post.author}</small>
               </p>
               <div style={{ display: "flex", gap: "10px", marginTop: "8px" }}>
-                <Link to={`/edit/${post.id}`}>Edit</Link>
+                <Link  className="border-4 text-2xl bg-yellow-300 text-black border-transparent rounded-2xl p-1" to={`/edit/${post.id}`}>Edit</Link>
                 <button
-                  className="relative group overflow-hidden px-8 py-3.5 rounded-xl font-black tracking-wider text-xs uppercase text-black  from-yellow-400 via-amber-300 to-yellow-500 hover:brightness-110 active:scale-95 shadow-[0_0_20px_rgba(250,204,21,0.35)] hover:shadow-[0_0_35px_rgba(250,204,21,0.65)] disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100 transition-all duration-300 ease-out"
+                  className="text-2xl bg-red-600 text-black rounded-2xl p-1"
                   onClick={() => handleDelete(post.id)}
                 >
                   Delete
