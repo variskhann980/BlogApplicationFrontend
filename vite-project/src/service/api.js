@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 
-const API = "https://blogapplication-7fre.onrender.com/api/posts";
+const API = "https://blogapplication-7fre.onrender.com/api/posts"; 
 
 
 export const getPosts=()=>axios.get(API) // it use in PostList

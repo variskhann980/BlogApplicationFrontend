@@ -62,7 +62,7 @@ return (
         <div>
           <label className="block  text-4xl text-shadow-white font-mono
           mb-3">Author</label>
-          <input type="text" name="author"
+          <input   type="text" name="author"
           placeholder="Enter Post author"
           onChange={handleChange} 
           className="w-full px-4 py-2.5 bg-zinc-900 text-white placeholder-zinc-500 border border-zinc-700 rounded-lg outline-none transition-all duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"/>
