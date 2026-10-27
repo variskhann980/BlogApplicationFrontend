@@ -67,7 +67,7 @@ function PostList() {
               <div style={{ display: "flex", gap: "10px", marginTop: "8px" }}>
                 <Link  className="border-4 text-2xl bg-yellow-300 text-black border-transparent rounded-2xl p-1" to={`/edit/${post.id}`}>Edit</Link>
                 <button
-                  className="text-2xl bg-red-600 text-black rounded-2xl p-1"
+                  className="text-2xl bg-red-600 text-black rounded-2xl p-1 "
                   onClick={() => handleDelete(post.id)}
                 >
                   Delete

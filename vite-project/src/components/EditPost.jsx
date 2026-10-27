@@ -59,26 +59,30 @@ const handleSubmit= async (e) =>{
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h1>Create new post</h1>
+
+        <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl p-8">
+            
+
+        <h1 className="text-orange-500 text-2xl font-mono text-center">Create new post</h1>
         {error && (<p>{error}</p>)}
         <div>
-          <label>Title</label>
-          <input type="text" name="title"
+          <label className="text-orange-500 font-mono">Title :</label>
+          <input  class="m-2  bg-transparent border-none outline-none border-b-2 border-gray-300 focus:border-orange-500 transition-colors duration-200"  type="text" name="title"
           placeholder="Enter Post title"
           value={post.title}
           onChange={handleChange} />
         </div>
 
         <div>
-          <label>Content</label>
-          <input type="text" name="content"
+          <label className="text-orange-500 font-mono">Content: </label>
+          <input class="m-2 border-2 bg-transparent border-none outline-none border-b-2 border-gray-300 focus:border-blue-500 transition-colors duration-200" type="text" name="content"
           placeholder="Enter Post Content"
           value={post.content}
           onChange={handleChange} />
         </div>
         <div>
-          <label>Author</label>
-          <input type="text" name="author"
+          <label className="text-orange-500 font-mono">Author</label>
+          <input class="m-2 border-2 border-none"type="text" name="author"
           placeholder="Enter Post author"
           value={post.author}
           onChange={handleChange} />
@@ -87,6 +91,7 @@ const handleSubmit= async (e) =>{
         <button>{submitting ? "Updating .." : "Update post"}</button>
 
         <button onClick={() => navigate("/") }>Cancel</button>
+          </div>
       </form>
     </>
   );
